@@ -5,7 +5,7 @@ import os
 import random
 
 
-WIN_WIDTH = 500
+WIN_WIDTH = 550
 WIN_HEIGHT = 800
 
 
@@ -152,11 +152,11 @@ class Base:
         win.blit(self.IMG, (self.x2, self.y))
     
 def draw_window(win, bird, pipes, base):
+    win.blit(BG_IMG, (0,0))
     for pipe in pipes:
         pipe.draw(win)
 
     base.draw(win)
-    win.blit(BG_IMG, (0,0))
     bird.draw(win)
     pygame.display.update()
 def main():
